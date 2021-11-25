@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
 public class Main {
@@ -33,12 +32,11 @@ public class Main {
     }
 
     private ObjectMapper modelMapper() {
-	var model = new ObjectMapper();
-	model.registerModule(new SimpleModule());
-	model.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-	model.setSerializationInclusion(JsonInclude.Include.NON_ABSENT);
-	model.configure(SerializationFeature.USE_EQUALITY_FOR_OBJECT_ID, false);
-	return model;
+	var mapper = new ObjectMapper();
+	mapper.registerModule(new SimpleModule());
+	mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+	mapper.setSerializationInclusion(JsonInclude.Include.NON_ABSENT);
+	return mapper;
     }
 
 }

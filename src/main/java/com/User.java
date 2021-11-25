@@ -12,7 +12,7 @@ public class User implements Serializable {
 
     private String name = "Marcelo";
 
-    private String email = "preis.udesc@gmail.com";
+    private String email = "test@gmail.com";
 
     private String password = "123456";
 
