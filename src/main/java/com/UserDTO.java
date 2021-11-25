@@ -6,12 +6,11 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
-
 public class UserDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty(access = Access.WRITE_ONLY)
+    @JsonProperty(value = "id", access = Access.WRITE_ONLY)
     private Long id;
 
     private String name;
