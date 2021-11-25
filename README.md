@@ -14,3 +14,4 @@ The aim of the project is to present or find the correct way to use the lib
 
 # Stackoverflow question
 
+https://stackoverflow.com/questions/70110390/jackson-properties-mapped-why-access-write-only-does-not-work
